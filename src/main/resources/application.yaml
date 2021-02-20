@@ -1,1 +1,6 @@
-
+#graphql:
+#  playground:
+#    tab:
+#    - name: Bank Account sample Query
+#      query: classpath:playground/bank_account.graphql
+#      variables: classpath:playground/bank_account_variables.json
