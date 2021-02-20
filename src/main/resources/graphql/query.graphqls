@@ -3,11 +3,6 @@ type Query {
     bankAccounts(count: Int):[BankAccount]
     bankAccount(id: ID):BankAccount
     bankAccountsByName(name: String):[BankAccount]
-
-    #clients
-    clients(count: Int):[Client]
-    client(id: ID):Client
-    clientsByName(name: String):[Client]
 }
 
 type Mutation {

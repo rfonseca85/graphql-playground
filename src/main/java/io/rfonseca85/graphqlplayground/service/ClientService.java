@@ -19,10 +19,7 @@ public class ClientService {
 
   @Transactional
   public Client createClient(final String name, final int age) {
-    final Client client = new Client();
-    client.setName(name);
-    client.setAge(age);
-    return this.clientRepository.save(client);
+    return this.clientRepository.save(Client.builder().name(name).age(age).build());
   }
 
   @Transactional(readOnly = true)
