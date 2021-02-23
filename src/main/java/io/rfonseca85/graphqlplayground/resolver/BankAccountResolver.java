@@ -29,6 +29,6 @@ public class BankAccountResolver implements GraphQLQueryResolver {
 
   public List<BankAccount> getBankAccountsByName(final String name) {
     log.info("BankAccountResolver.getBankAccountsByName name:{}",name);
-    return this.bankAccountService.getBankAccountsByType(name);
+    return this.bankAccountService.getBankAccountsByName(name);
   }
 }

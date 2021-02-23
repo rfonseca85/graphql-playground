@@ -1,0 +1,4 @@
+input BankAccountInput {
+    name: String
+    curency: Currency
+}

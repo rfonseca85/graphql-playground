@@ -5,6 +5,7 @@ import io.rfonseca85.graphqlplayground.dao.entity.Currency;
 import io.rfonseca85.graphqlplayground.dao.repository.BankAccountRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -21,9 +22,7 @@ public class BankAccountService {
   @Transactional
   public BankAccount createBankAccount(final String name, final Currency currency) {
 
-    final BankAccount bankAccount = new BankAccount();
-    bankAccount.setName(name);
-    bankAccount.setCurrency(currency);
+    final BankAccount bankAccount = new BankAccount(name, currency);
     return this.bankAccountRepository.save(bankAccount);
   }
 
@@ -38,7 +37,7 @@ public class BankAccountService {
   }
 
   @Transactional(readOnly = true)
-  public List<BankAccount> getBankAccountsByType(String name) {
+  public List<BankAccount> getBankAccountsByName(String name) {
     return this.bankAccountRepository.findBankAccountsByName(name);
   }
 

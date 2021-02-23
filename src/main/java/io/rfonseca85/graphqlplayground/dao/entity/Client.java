@@ -7,7 +7,6 @@ import lombok.EqualsAndHashCode;
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Builder
 @Data
 @EqualsAndHashCode
 @Entity
@@ -26,4 +25,12 @@ public class Client implements Serializable {
   @Column(name = "age")
   private int age;
 
+  public Client() {
+    super();
+  }
+
+  public Client(String name, int age) {
+    this.name = name;
+    this.age = age;
+  }
 }

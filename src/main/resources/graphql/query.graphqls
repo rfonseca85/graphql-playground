@@ -3,9 +3,9 @@ type Query {
     bankAccounts(count: Int):[BankAccount]
     bankAccount(id: ID):BankAccount
     bankAccountsByName(name: String):[BankAccount]
-}
 
-type Mutation {
-    createBankAccount(name: String!, currency: Currency):BankAccount
-    createClient(name: String!, age: Int):Client
+    #Clients
+#    clients(count: Int):[Client]
+#    clientByName(name: String):[Client]
+
 }

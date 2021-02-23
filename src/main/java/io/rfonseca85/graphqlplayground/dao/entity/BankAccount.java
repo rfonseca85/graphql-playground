@@ -1,10 +1,11 @@
 package io.rfonseca85.graphqlplayground.dao.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import javax.persistence.*;
 import java.io.Serializable;
-import java.time.LocalDate;
 
 @Data
 @EqualsAndHashCode
@@ -22,5 +23,12 @@ public class BankAccount implements Serializable {
   private String name;
 
   private Currency currency;
+
+  public BankAccount() {super(); }
+
+  public BankAccount(String name, Currency currency) {
+    this.name = name;
+    this.currency = currency;
+  }
 
 }

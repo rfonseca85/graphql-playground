@@ -1,0 +1,7 @@
+type Mutation {
+    createBankAccount(input: BankAccountInput):BankAccount!
+#    updateBankAccount(id: ID!, input: BankAccountInput):BankAccount!
+
+#    createClient(name: String!, age: Int):Client
+#    updateClient
+}
